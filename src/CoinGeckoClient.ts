@@ -28,7 +28,7 @@ import {
   GlobalDefiResponse,
   Options,
   HttpResponse,
-} from './Inteface';
+} from './Inteface.ts';
 
 /**
  * The wrap client to access all api on coin gecko
