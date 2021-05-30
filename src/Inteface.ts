@@ -1,4 +1,4 @@
-import { PLATFORMS } from './Enum';
+import { PLATFORMS } from './Enum.ts';
 
 export interface PingResponse {
   gecko_says: string;

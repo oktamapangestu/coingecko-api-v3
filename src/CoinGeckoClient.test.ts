@@ -1,4 +1,4 @@
-import { CoinGeckoClient } from './CoinGeckoClient';
+import { CoinGeckoClient } from './CoinGeckoClient.ts';
 
 const client = new CoinGeckoClient();
 jest.setTimeout(30000);

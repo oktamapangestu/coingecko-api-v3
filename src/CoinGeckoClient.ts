@@ -1,5 +1,5 @@
 import https from 'https';
-import { API_ROUTES, PLATFORMS } from './Enum';
+import { API_ROUTES, PLATFORMS } from './Enum.ts';
 import {
   IndexItem,
   CoinListResponseItem,
