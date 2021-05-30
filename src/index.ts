@@ -1,3 +1,3 @@
-export * from './Enum';
-export * from './Inteface';
-export * from './CoinGeckoClient';
+export * from './Enum.ts';
+export * from './Inteface.ts';
+export * from './CoinGeckoClient.ts';
