@@ -30,7 +30,7 @@ import {
   HttpResponse,
 } from './Inteface.ts';
 
-declare const Buffer
+declare const Buffer: any
 
 /**
  * The wrap client to access all api on coin gecko
