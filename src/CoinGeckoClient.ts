@@ -30,6 +30,8 @@ import {
   HttpResponse,
 } from './Inteface.ts';
 
+declare const Buffer
+
 /**
  * The wrap client to access all api on coin gecko
  */
@@ -78,7 +80,7 @@ export class CoinGeckoClient {
       }
     };
     return new Promise<HttpResponse<T | any>>((resolve, reject) => {
-      const req = https.request(url, options, (res) => {
+            const req = https.request(url, options, (res: any) => {
         if (res.statusCode && res.statusCode === 429) {
           resolve({
             statusCode: res.statusCode,
@@ -90,7 +92,7 @@ export class CoinGeckoClient {
           // reject(new Error(`HTTP status code ${res.statusCode}`));
         }
         const body: Array<Uint8Array> = [];
-        res.on('data', (chunk) => body.push(chunk));
+        res.on('data', (chunk: any) => body.push(chunk));
         res.on('end', () => {
           const resString = Buffer.concat(body).toString();
           resolve({
@@ -101,7 +103,7 @@ export class CoinGeckoClient {
         });
       });
 
-      req.on('error', (err) => {
+      req.on('error', (err: any) => {
         reject(err);
       });
 
