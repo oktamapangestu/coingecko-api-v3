@@ -1,4 +1,5 @@
-import https from 'https';
+//import https from 'https';
+import * as https from 'https://deno.land/std@0.97.0/http/server.ts';
 import { API_ROUTES, PLATFORMS } from './Enum.ts';
 import {
   IndexItem,

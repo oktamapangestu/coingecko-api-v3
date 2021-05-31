@@ -48,7 +48,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 exports.__esModule = true;
 exports.CoinGeckoClient = void 0;
-var https_1 = require("https");
+//import https from 'https';
+var https = require("https://deno.land/std@0.97.0/http/server.ts");
 var Enum_ts_1 = require("./Enum.ts");
 /**
  * The wrap client to access all api on coin gecko
@@ -101,7 +102,7 @@ var CoinGeckoClient = /** @class */ (function () {
                     }
                 };
                 return [2 /*return*/, new Promise(function (resolve, reject) {
-                        var req = https_1["default"].request(url, options, function (res) {
+                        var req = https.request(url, options, function (res) {
                             if (res.statusCode && res.statusCode === 429) {
                                 resolve({
                                     statusCode: res.statusCode,
